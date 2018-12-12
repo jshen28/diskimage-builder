@@ -25,6 +25,7 @@ case "$DIB_INIT_SYSTEM" in
         fi
         systemctl enable $(svc-map ironic-python-agent).service
         systemctl enable ironic-agent-create-rescue-user.path
+        systemctl enable lldpd.service
         ;;
     sysv)
         update-rc.d iptables disable
